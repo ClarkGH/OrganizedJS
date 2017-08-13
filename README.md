@@ -1,0 +1,1 @@
+Organizing my knowledge in a lessonlike format for reference to my juniors and people who would like to understand Javascript a bit more in-depth
