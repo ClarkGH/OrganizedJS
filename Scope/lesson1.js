@@ -1,41 +1,21 @@
-// Playing with scope (the context of objects)
+// How to scope (variables)
+
+// In JS, scope is the set of objects and their properties/methods that you have access to
+// Javascript uses something called Function Scope: the scope changes inside functions
+
 
 // Example 1:
-// copy and paste line 4 into your web console
-console.log(this);
+//copy and paste the below into your web browser's console
+var foo = 0; //here is a variable in the global scope
 
-// When ran, you will see the context for your browser's Window object
+function bar() {
+  var baz = 1; //here is a variable in the scope of the bar function
+} 
 
-// 'this' returns the context of the global object when it is inside global "Scope"
-// scope is the context of the object the method belongs to
+console.log( baz ); //what do you think this will print? 
 
+//With the information given, ask yourself the following questions
+// What did it log?
+// Why did it log what it did?
 
-//Example 2:
-
-// copy and paste lines: 14-21
-var kitten = {
-  name: "Mr. sparkles", //set a property
-  sayName: function() { //create a method
-    console.log( this );
-  }
-}
-
-kitten.sayName(); //here we call the sayName method within the kitten
-//you'll now see the context for the kitten object returned
-
-//Example 3:
-
-//refresh or new browser, then copy and paste lines: 25-32
-var kitten = {
-  name: "Mr. sparkles",
-  sayName: function() {
-    console.log( "Meow, my name is, " + this.name );
-  }
-}
-
-console.log( "Meow, my name is, " + kitten.name );
-kitten.sayName();
-
-//note that the two are logging the same value.
-
-//for now, think of 'this', as a way to have access to the context of your object
+// Review in lesson 2
