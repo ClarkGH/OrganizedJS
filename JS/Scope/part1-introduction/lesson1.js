@@ -19,3 +19,7 @@ console.log( baz ); //what do you think this will print?
 // Why did it log what it did?
 
 // Review in lesson 2
+
+// Remember: There is global (the highest level of scope), and local (where the engine currently is in running it's queue) scope
+
+// If this is confusing, don't struggle to understand it and continue to lesson2 of this series
