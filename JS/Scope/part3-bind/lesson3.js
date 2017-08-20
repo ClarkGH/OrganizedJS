@@ -22,6 +22,7 @@ var logSaying = function() {
 
 var sayTheThing = logSaying.bind(animal); //here I set a variable to the function with the animal object's context bound to it
 
-sayTheThing(); //here I run the function
+sayTheThing(); //here I run the function with the newly bound scope
 
 // the 'this', on line 18, is pointing to animal's scope and now has access to its properties, methods, and values
+// next lesson: .call() and .apply()
