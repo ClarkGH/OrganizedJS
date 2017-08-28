@@ -1,14 +1,12 @@
-// Simple Callback example
+// Simple Callbacks
 
-// example 1: common callback
-setTimeout( () => {
- console.log('I\ve finished running.');
-}, '3000');
+// A callback is simply a function used as an argument
+// Callbacks can be both synchronous and asynchronous
+// For the sake of this section, we'll only deal with synchronous code
 
-// note the function in the argument, that is a callback
-// let's create our own callback
+// Let's create our own callback
 
-// Example 2
+// Example 1
 // as always, copy and paste this into your dev console
 function sayCallbackVal( arg, callback ) {
   console.log( callback( arg ) );
@@ -23,7 +21,7 @@ sayCallbackVal( 'hi', function( arg ) {
 //currently we're getting a simple value return via the callback
 //Let's create a more useful function that uses Callbacks
 
-// Example 3
+// Example 2
 
 function doMathWithCB( valueArr, callback ) {
   console.log( callback( valueArr ) );
