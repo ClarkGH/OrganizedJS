@@ -1,0 +1,3 @@
+/*
+JS Classical Inheritance is verbose
+*/
