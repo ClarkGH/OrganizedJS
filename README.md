@@ -1,8 +1,8 @@
 # Organized JS/HTML/CSS
 
-The main purpose of this repository is to teach people how to better understand why Javascript works the way in a more simplified, yet detailed, manner.
+##Purpose
 
-There are potential multiple code snippets in each file. While you can copy and paste code into web browsers, a great way to learn is to write your own and test and play with it.
+These are my notes compiled in order regarding subjects I feel people should play with to fully understand.
 
 ## To get the most out of my code
 
