@@ -10,12 +10,17 @@
 1 + 2; // in this case, 1 and 2 are operands. The '+' symbol is the operator
 
 /*
-  Javascript supports the following operators:
-    Aritmetic
-    Comparison
-    Logical (relational)
+  Javascript supports the following types of operators:
+    Arithmetic
     Assignment
-    Conditional
+    Bitwise
+    Comparison
+    Comma
+    Conditional(ternary)
+    Logical
+    Relational
+    String
+    Unary
 */
 
 // Try to think of a few operators you've seen in javascript
