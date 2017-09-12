@@ -17,7 +17,7 @@
 
 // Ternary operators take 3 operands, in the case of JS there is only one ternary operator
 
-// Example 3: Ternary operator
+// Example 3: The Conditional(ternary) operator
 // syntax: condition ? value1 : value2
 var breakfast = ( 1 > 2 ) ? 'waffle' : 'pancake'; 
 // the above will assign the value "waffle" if 1 is greater than two, otherwise it will set it to "pancake"

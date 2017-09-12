@@ -9,6 +9,15 @@
 // Example 1: basic operator and operands
 1 + 2; // in this case, 1 and 2 are operands. The '+' symbol is the operator
 
+/*
+  Javascript supports the following operators:
+    Aritmetic
+    Comparison
+    Logical (relational)
+    Assignment
+    Conditional
+*/
+
 // Try to think of a few operators you've seen in javascript
 // What do they do?
 // How are they different from normal functions?
