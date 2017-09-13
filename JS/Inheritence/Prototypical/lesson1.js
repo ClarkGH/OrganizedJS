@@ -5,6 +5,8 @@ is simple
 */
 
 // In JS there is something called a prototype
+// Javascript objects inherit properties and methods from their prototype
+// Object.prototype
 
 // Example 1
 var mammal = {
