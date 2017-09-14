@@ -24,3 +24,8 @@ appleDragonfruitTerror.showSmoothie();
 // the new keyword will return us an object in this case
 // play around with this a bit, it's something that you need to conceptually understand
 // functions are special objects
+
+/* Takeaways with function constructors
+Always capitalize function constructors, this way you know that they're constructors as opposed to normal functions
+When creating a new instance of a constructor function, use the 'new' keyword
+*/
