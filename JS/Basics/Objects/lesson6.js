@@ -19,4 +19,4 @@ console.log(kitty);
 //We can create many similar objects this way
 //More on this with inheritance
 
-//TODO: add a section regarding object.create() with inheritence
+//TODO: add a section regarding Object.create() with inheritence
