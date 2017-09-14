@@ -9,6 +9,9 @@ The index starts from 0 and increments upwards
 var arr = [];
 console.log(arr); //will log the empty array, note that since it's an object it has some builtin methods
 
+
+//TODO: should move this out to a later lesson
+
 arr.push(1); // here we use the push method, which pushes the value 1 inside
 console.log(arr); //what do you expect to see here? 
 // Will the array still be empty?
