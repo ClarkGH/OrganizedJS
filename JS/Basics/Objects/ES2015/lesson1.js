@@ -21,3 +21,4 @@ var dog = new Animal( 'dog', 'woof' );
 
 // this is NOT the same as a class from other languages
 // classes are objects in JS, they follow JS prototypical inheritance
+// using classes in JS is just syntactic sugar that makes your life easier
