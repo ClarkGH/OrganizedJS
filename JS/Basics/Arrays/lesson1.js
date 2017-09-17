@@ -6,5 +6,7 @@ The index starts from 0 and increments upwards
 */
 
 // Example 1: Array
-var arr = [];
+var arr = [], //array literal
+  arr2 = new Array(3);
 console.log(arr); //will log the empty array, note that since it's an object it has some builtin methods
+console.log(arr2);
