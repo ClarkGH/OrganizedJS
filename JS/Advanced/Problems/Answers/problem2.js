@@ -12,5 +12,45 @@ const exampleArray = [18, 97, 2, 9, 3, 0, 26, 0, 26, 15, 5, 18, 43];
 // Can you solve for this example alone?
 // Hint, you had to find unique triplets in the last problem.
 
+/* Full Answer */
 
-// Think of this as an exercise
+function highestTripletProduct( numArray ) {
+
+  if (numArray.length < 3) {
+      throw new Error('You need at least three numbers in the array');
+  }
+
+  var highestValue = Math.max(numArray[0], numArray[1]),
+    lowestValue  = Math.min(numArray[0], numArray[1]),
+    highestProductOf2 = numArray[0] * numArray[1],
+    lowestProductOf2  = numArray[0] * numArray[1],
+    highestProductOf3 = numArray[0] * numArray[1] * numArray[2];
+
+  for (var i = 2; i < numArray.length; i++) {
+      var currentPos = numArray[i];
+
+      highestProductOf3 = Math.max(
+          highestProductOf3,
+          currentPos * highestProductOf2,
+          currentPos * lowestProductOf2
+      );
+
+      highestProductOf2 = Math.max(
+          highestProductOf2,
+          currentPos * highest,
+          currentPos * lowest
+      );
+
+      lowestProductOf2 = Math.min(
+          lowestProductOf2,
+          currentPos * highest,
+          currentPos * lowest
+      );
+
+      highest = Math.max(highest, currentPos);
+
+      lowest = Math.min(lowest, currentPos);
+  }
+
+  return highestProductOf3;
+}
