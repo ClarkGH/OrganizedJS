@@ -12,45 +12,71 @@ const exampleArray = [18, 97, 2, 9, 3, 0, 26, 0, 26, 15, 5, 18, 43];
 // Can you solve for this example alone?
 // Hint, you had to find unique triplets in the last problem.
 
-/* Full Answer */
+/* Example slow and ugly (n^3) Answer */
+// function highestTripletProduct ( numArray ) {
+//   if ( numArray.length < 3 ) { //check for 'if array' in testing as well for more error handline
+//     throw new Error('Array isn\'t large enough.');
+//   }
 
-function highestTripletProduct( numArray ) {
+//   var highestProd = ( numArray[0] * numArray[1] * numArray[2] ) ,
+//     answer = [numArray[0], numArray[1], numArray[2]],
+//     tmpVal;
 
-  if (numArray.length < 3) {
-      throw new Error('You need at least three numbers in the array');
-  }
+//   for ( var i = 0; i < numArray.length; i++) {
+//     for ( var j = 0; j < numArray.length; j++) {
+//       for ( var k = 0; k < numArray.length; k++) {
+//         tmpVal = ( numArray[i] * numArray[j] * numArray[k] );
+//         if ( i !== j && i !== k && j !== k && tmpVal > highestProd ) {
+//           highestProd = tmpVal;
+//           answer = [numArray[i], numArray[j], numArray[k]];
+//         }
+//       }
+//     }
+//   }
+//   return answer;
+// }
 
-  var highestValue = Math.max(numArray[0], numArray[1]),
-    lowestValue  = Math.min(numArray[0], numArray[1]),
-    highestProductOf2 = numArray[0] * numArray[1],
-    lowestProductOf2  = numArray[0] * numArray[1],
-    highestProductOf3 = numArray[0] * numArray[1] * numArray[2];
+/* Full Fast and clean (n^2) Answer */
 
-  for (var i = 2; i < numArray.length; i++) {
-      var currentPos = numArray[i];
+// function highestTripletProduct( numArray ) {
 
-      highestProductOf3 = Math.max(
-          highestProductOf3,
-          currentPos * highestProductOf2,
-          currentPos * lowestProductOf2
-      );
+//   if (numArray.length < 3) {
+//       throw new Error('Array isn\'t large enough.');
+//   }
 
-      highestProductOf2 = Math.max(
-          highestProductOf2,
-          currentPos * highest,
-          currentPos * lowest
-      );
+//   var highestValue = Math.max(numArray[0], numArray[1]),
+//     lowestValue  = Math.min(numArray[0], numArray[1]),
+//     highestProductOf2 = numArray[0] * numArray[1],
+//     lowestProductOf2  = numArray[0] * numArray[1],
+//     highestProductOf3 = numArray[0] * numArray[1] * numArray[2];
 
-      lowestProductOf2 = Math.min(
-          lowestProductOf2,
-          currentPos * highest,
-          currentPos * lowest
-      );
+//   for (var i = 2; i < numArray.length; i++) {
+//       var currentPos = numArray[i];
 
-      highest = Math.max(highest, currentPos);
+//       highestProductOf3 = Math.max(
+//           highestProductOf3,
+//           currentPos * highestProductOf2,
+//           currentPos * lowestProductOf2
+//       );
 
-      lowest = Math.min(lowest, currentPos);
-  }
+//       highestProductOf2 = Math.max(
+//           highestProductOf2,
+//           currentPos * highest,
+//           currentPos * lowest
+//       );
 
-  return highestProductOf3;
-}
+//       lowestProductOf2 = Math.min(
+//           lowestProductOf2,
+//           currentPos * highest,
+//           currentPos * lowest
+//       );
+
+//       highest = Math.max(highest, currentPos);
+
+//       lowest = Math.min(lowest, currentPos);
+//   }
+
+//   return highestProductOf3;
+// }
+
+// highestTripletProduct( exampleArray )
