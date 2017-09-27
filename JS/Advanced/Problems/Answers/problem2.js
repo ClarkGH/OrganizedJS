@@ -12,7 +12,7 @@ const exampleArray = [18, 97, 2, 9, 3, 0, 26, 0, 26, 15, 5, 18, 43];
 // Can you solve for this example alone?
 // Hint, you had to find unique triplets in the last problem.
 
-/* Example slow and ugly (n^3) Answer */
+/* Example slow and ugly O(n^3) Answer */
 // function highestTripletProduct ( numArray ) {
 //   if ( numArray.length < 3 ) { //check for 'if array' in testing as well for more error handline
 //     throw new Error('Array isn\'t large enough.');
@@ -36,7 +36,7 @@ const exampleArray = [18, 97, 2, 9, 3, 0, 26, 0, 26, 15, 5, 18, 43];
 //   return answer;
 // }
 
-/* Full Fast and clean (n^2) Answer */
+/* Full Fast and clean O(n) Answer */
 
 // function highestTripletProduct( numArray ) {
 
