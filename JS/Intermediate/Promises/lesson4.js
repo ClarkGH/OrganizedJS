@@ -1,5 +1,7 @@
 // Promises: Error handling pt 1
 
+// Error handling is important to prevent user or dev errors. Think of all the edge-cases you can when you write out error handling
+
 // Example:
 var ourPromise = new Promise( ( resolve, reject ) => {
   resolve( 'Beep Boop Beep' );
@@ -7,7 +9,7 @@ var ourPromise = new Promise( ( resolve, reject ) => {
 
 ourPromise.then ( ( value ) => {
   console.log( value );
-  throw 'Ruh Roh Raggy'; //we're going to force an error here
+  Promise.reject( 'Ruh Roh Raggy' ); //we're going to force an error here, we could also use throw instead of Promise.reject
 }).catch( ( error ) => {
   console.error(error);
 }).then( 
