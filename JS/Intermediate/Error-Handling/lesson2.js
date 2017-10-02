@@ -10,11 +10,11 @@
 // Example 1: Simple try-catch
 
 try {
-  throw new Error('I did it again!');
+  throw new Error( 'I did it again!' );
 }
 
 catch ( error ) {
-  console.error('Error: Oops ', error.message );
+  console.error( 'Error: Oops ', error.message );
 }
 
 // If you put this into your console, what do you see?
@@ -42,7 +42,7 @@ finally {
 // Change the variable to true and log it
 
 // Example 3: Nested example
-(() =>{
+(() => {
   try {
     try {
       throw new Error( 'Oh what wicked webs we weave.' );
@@ -58,6 +58,7 @@ finally {
       return;
     }
   }
+
   catch ( error ) {
     console.error( 'Outer Error: ', error.message );
   }
