@@ -14,6 +14,10 @@
   We only want this function to work with numbers.
   Let's add Error handling
 
+  Here's the Error object we'll be using:
+
+  new Error('error message');
+
 */
 
 // Example 1: Simple Error
