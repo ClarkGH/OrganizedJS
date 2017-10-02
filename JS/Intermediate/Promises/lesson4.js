@@ -11,7 +11,7 @@ ourPromise.then ( ( value ) => {
   console.log( value );
   Promise.reject( 'Ruh Roh Raggy' ); //we're going to force an error here, we could also use throw instead of Promise.reject
 }).catch( ( error ) => {
-  console.error(error);
+  console.error( error );
 }).then( 
   () => {
     console.log( 'The chain is fixed and we can try again or do some sort of damage control. Whatever we want. The world is our oyster!' );
