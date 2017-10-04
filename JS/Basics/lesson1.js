@@ -26,4 +26,5 @@ function () {} //object
 [1, 2, 3] //object 'holding' primitive values
 //etc.
 
-// I recommend learning primitives first
+// Review the primitives section first if you don't know where to start
+// After primitives move onto objects

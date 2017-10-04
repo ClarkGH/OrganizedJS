@@ -5,9 +5,9 @@
 
 //Example 1: Array ForEach Polyfill
 if ( !Array.prototype.forEach ) { //note, if the engine has a foreach method, this code will not run
-  Array.prototype.forEach = function(callback, thisArg) {
+  Array.prototype.forEach = function( callback, thisArg ) {
     if(typeof(callback) !== "function") {
-      throw new TypeError(callback + " is not a function!");
+      throw new TypeError( callback + " is not a function!" );
     }
     var length = this.length;
     for( var i = 0; i < length; i++ ) {
