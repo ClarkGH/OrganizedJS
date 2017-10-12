@@ -1,4 +1,4 @@
-// Symbols: semicolons
+// Operators: Semicolons
 
 /* 
 Semicolons are used to point out the end of a statement
