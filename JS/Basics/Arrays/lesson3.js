@@ -1,8 +1,8 @@
 // Arrays: Push and Pop
 
 /*
-  - Push and Pop are LIFO/Queue methods
-  - Last in first out (LIFO/Queue)
+  - Push and Pop are LIFO/Stack methods
+  - Last in first out (LIFO/Stack)
 */
 
 // Example 1: Push
