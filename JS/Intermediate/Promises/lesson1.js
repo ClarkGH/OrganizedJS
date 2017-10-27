@@ -24,3 +24,4 @@ setTimeout( asyncTask( 2, asyncSquared), 500);
 */
 
 // With es6, we can chain promises instead, but first we should know how to make our own
+// It is currently recommended that you work with a promise library like bluebird as native promises "leak" memory
