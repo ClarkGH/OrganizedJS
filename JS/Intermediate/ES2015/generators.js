@@ -10,22 +10,38 @@
     5. Use function* syntax
 */
 
-// Example 1: Generator
+// Example 1: Basic Generator
 function* idGenerator() {
   var id = 0;
 
-  while(true) {
+  while( id < 5 ) {
     yield id++;
   }
 }
 
-var generator = idGenerator();
+const generator = idGenerator();
 
-console.log(generator.next().value);
-console.log(generator.next().value);
+for ( var i = 0; i < 10; i++ ) {
+  console.log( generator.next().value );
+}
 
-/* 
-  Look at the above code:
-  - Will the repeated code on lines 24/25 repeat the same value?
-  - Test and see
-*/
+
+// Example 2: Chaining iterators
+const num1 = sayNum1();
+
+function* sayNum1() {
+  yield 1;
+  yield* sayNum2(); // when inside a generator, you must use yield* to refer to another generator
+  yield 'I\'m done, next log will say so.';
+}
+
+function* sayNum2() {
+  num = 5;
+  while( num > 0 ) {
+    yield num--;
+  }
+}
+
+for ( var i = 0; i < 8; i++ ) {
+  console.log( num1.next() );
+}
