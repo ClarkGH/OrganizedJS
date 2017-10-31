@@ -26,11 +26,11 @@ for ( var i = 0; i < 10; i++ ) {
 }
 
 
-// Example 2: Chaining iterators
+// Example 2: Chaining Generators
 const num1 = sayNum1();
 
 function* sayNum1() {
-  yield 1;
+  yield 'I\'ve started, next few logs are within another generator';
   yield* sayNum2(); // when inside a generator, you must use yield* to refer to another generator
   yield 'I\'m done, next log will say so.';
 }
