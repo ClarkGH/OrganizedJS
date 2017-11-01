@@ -18,4 +18,5 @@
     - Function Composition (pure functions)
     - State
     - Immutability
+    - .map(), .filter(), .reduce()
 */
