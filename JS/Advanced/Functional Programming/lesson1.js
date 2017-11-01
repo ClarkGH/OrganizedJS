@@ -15,4 +15,7 @@
   To understand functional programming, make sure you understand the following:
     - Closures
     - Callbacks
+    - Function Composition (pure functions)
+    - State
+    - Immutability
 */
