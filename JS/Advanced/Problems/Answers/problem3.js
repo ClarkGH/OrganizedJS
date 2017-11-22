@@ -1,6 +1,6 @@
-// Merge two already sorted arrays, initially solve for no duplicates, then solve for duplicates
+// Merge two already sorted binary arrays. Bonus, solve in O(n) time
 
-// Without duplicates
+// Following solution works for both at O(n) time complexity
 
 var arr1 = [1,3,5,7,9],
     arr2 = [2,4,6,8,10];
@@ -31,5 +31,3 @@ function myFunction(arr1, arr2) {
 }
 
 console.log(myFunction(arr1,arr2));
-
-// With
