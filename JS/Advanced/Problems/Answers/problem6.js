@@ -10,9 +10,10 @@ function findPrimeFactors(num) {
   var divisor = 2,
     factors = [];
 
-  while ( num > divisor ) {
+  while ( num > 2 ) {
     if ( num % divisor === 0 ) {
       factors.push(divisor);
+      num = num / divisor;
     }
     divisor++;
   }
