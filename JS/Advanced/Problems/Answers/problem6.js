@@ -19,3 +19,6 @@ function findPrimeFactors(num) {
   }
   return factors;
 }
+
+// Can you speend this algorithm up more?
+// How?
