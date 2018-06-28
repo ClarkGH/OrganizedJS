@@ -53,7 +53,23 @@
   // });
 // }
 
-// There is a way to get an O(log(n)) solution, HINT: head/tail values swap
+// O(n) bad example, overly complex and has a bug, can you fix it?
+// function reverseStr(str) {
+//   let strArr = [];
+// 
+//   for (let i = 0; i < str.length; i++) {
+//     strArr.push(str[i]);
+//   }
+// 
+//   let head = 0,
+//     tail = strArr.length - 1;
+//   while (head < tail) {
+//     [strArr[head], strArr[tail]] = [[strArr[tail], strArr[head]]];
+//     head++;
+//     tail--;
+//   }
+//   return strArr.join('');
+// }
 
 // 2. Is palindrome? (we've already reversed a string)
 
