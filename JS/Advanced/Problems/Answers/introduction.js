@@ -98,3 +98,26 @@
 //   }
 //   return true;
 // }
+
+// Find the character most common character in a string
+// function findMostCommonChar(str) {
+//   let charMap = {},
+//     topVal = 0,
+//     answer = '';
+
+//   str.split('').forEach((char) => {
+//     if(charMap[char]) {
+//       charMap[char]++;
+//     } else {
+//       charMap[char] = 1;
+//     }
+//   });
+
+//   for(let char in charMap) {
+//     if(charMap[char] > topVal) {
+//       topVal = charMap[char];
+//       answer = char;
+//     }
+//   }
+ 
+// }
