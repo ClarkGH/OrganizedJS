@@ -129,6 +129,20 @@
 
 // Split
 
+// Given an array of numbers, find and print out a list of the two indices of two values that add up to a given sum value
+var twoSum = function (nums, target) {
+  let answerMap = {},
+    complimentaryVal;
+  for (let i = 0; i < nums.length; ++i) {
+    complimentaryVal = target - nums[i];
+    if (answerMap[complimentaryVal] === undefined) {
+      answerMap[nums[i]] = i;
+    } else {
+      return [answerMap[complimentaryVal], i];
+    }
+  }
+};
+
 // Find and print out a list of unique triplets 
 // that sum up to the specified value
 
