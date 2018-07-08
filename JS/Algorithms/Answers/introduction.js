@@ -130,15 +130,16 @@
 // Split
 
 // Given an array of numbers, find and print out a list of the two indices of two values that add up to a given sum value
+// O(n) solution
 var twoSum = function (nums, target) {
-  let answerMap = {},
+  let complimentaryValMap = {},
     complimentaryVal;
   for (let i = 0; i < nums.length; ++i) {
     complimentaryVal = target - nums[i];
-    if (answerMap[complimentaryVal] === undefined) {
-      answerMap[nums[i]] = i;
+    if (complimentaryValMap[complimentaryVal] === undefined) {
+      compMap[nums[i]] = i;
     } else {
-      return [answerMap[complimentaryVal], i];
+      return [compMap[complimentaryVal], i];
     }
   }
 };
