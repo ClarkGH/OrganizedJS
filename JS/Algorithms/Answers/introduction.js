@@ -137,9 +137,9 @@ var twoSum = function (nums, target) {
   for (let i = 0; i < nums.length; ++i) {
     complimentaryVal = target - nums[i];
     if (complimentaryValMap[complimentaryVal] === undefined) {
-      compMap[nums[i]] = i;
+      complimentaryValMap[nums[i]] = i;
     } else {
-      return [compMap[complimentaryVal], i];
+      return [complimentaryValMap[complimentaryVal], i];
     }
   }
 };
