@@ -36,7 +36,7 @@ LinkedList.prototype.addToTail = function(val) {
   this.tail = newNode;
 }
 
-// Ability to remove head
+// Ability to remove Head
 LinkedList.prototype.removeHead = function() {
   if (!this.head) {
     return null;
@@ -47,6 +47,21 @@ LinkedList.prototype.removeHead = function() {
     this.head.prev = null;
   } else {
     this.tail = null;
+  }
+  return val;
+}
+
+// Ability to remove Tail
+LinkedList.prototype.removeTail = function() {
+  if (!this.tail) {
+    return null;
+  }
+  let val = this.tail.val;
+  this.tail = this.tail.prev;
+  if (this.tail) {
+    this.tail.next = null;
+  } else {
+    this.head = null;
   }
   return val;
 }
