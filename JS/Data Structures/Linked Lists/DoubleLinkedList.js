@@ -14,7 +14,7 @@ function Node(val, next, prev) {
   this.prev = prev;
 }
 
-// Ability to add to the head with this function
+// Ability to add to the head
 LinkedList.prototype.addToHead = function(val) {
   let newNode = new Node(val,this.head, null);
   if (this.head !== null) {
@@ -23,4 +23,15 @@ LinkedList.prototype.addToHead = function(val) {
     this.tail = newNode;
   }
   this.head = newNode;
+}
+
+// Ability to add to the tail
+LinkedList.prototype.addToTail = function(val) {
+  let newNode = new Node(val, null, this.tail);
+  if (this.tail) {
+    this.tail.next = newNode;
+  } else {
+    this.head = newNode;
+  }
+  this.tail = newNode;
 }
