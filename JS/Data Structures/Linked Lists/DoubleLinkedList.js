@@ -5,14 +5,14 @@
 function LinkedList() {
   this.head = null;
   this.tail = null;
-}
+};
 
 // The Node Object
 function Node(val, next, prev) {
   this.val = val;
   this.next = next;
   this.prev = prev;
-}
+};
 
 // Ability to add to the head
 LinkedList.prototype.addToHead = function(val) {
@@ -23,7 +23,7 @@ LinkedList.prototype.addToHead = function(val) {
     this.tail = newNode;
   }
   this.head = newNode;
-}
+};
 
 // Ability to add to the tail
 LinkedList.prototype.addToTail = function(val) {
@@ -34,7 +34,7 @@ LinkedList.prototype.addToTail = function(val) {
     this.head = newNode;
   }
   this.tail = newNode;
-}
+};
 
 // Ability to remove Head
 LinkedList.prototype.removeHead = function() {
@@ -49,7 +49,7 @@ LinkedList.prototype.removeHead = function() {
     this.tail = null;
   }
   return val;
-}
+};
 
 // Ability to remove Tail
 LinkedList.prototype.removeTail = function() {
@@ -64,4 +64,16 @@ LinkedList.prototype.removeTail = function() {
     this.head = null;
   }
   return val;
-}
+};
+
+// Ability to search through the list
+LinkedList.prototype.search = function(val) {
+  let curNode = this.head;
+  while (curNode !== null) {
+    if (curNode.val === val) {
+      return curNode;
+    }
+    curNode = curNode.next;
+  }
+  return null;
+};
