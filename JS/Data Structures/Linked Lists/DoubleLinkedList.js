@@ -1,5 +1,5 @@
 // What a linked list would look like in javascript
-// Look up constructor functions if this looks confusing
+
 
 // The LinkedList Object
 function LinkedList() {
