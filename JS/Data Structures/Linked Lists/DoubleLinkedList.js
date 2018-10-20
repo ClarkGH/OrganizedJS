@@ -69,6 +69,7 @@ LinkedList.prototype.removeTail = function() {
 // Ability to search through the list
 LinkedList.prototype.search = function(val) {
   let curNode = this.head;
+
   while (curNode !== null) {
     if (curNode.val === val) {
       return curNode;
@@ -77,3 +78,19 @@ LinkedList.prototype.search = function(val) {
   }
   return null;
 };
+
+// Find the indices of the nodes with searched for value. 
+LinkedList.prototype.indexOf = function(val) {
+  let curNode = this.head,
+    index = 0,
+    indices = [];
+
+  while (curNode !== null) {
+    if (curNode.val === val) {
+      indices = [...indices, index];
+    }
+    curNode = curNode.next;
+    index++;
+  }
+  return indices;
+}
