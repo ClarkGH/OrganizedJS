@@ -25,11 +25,25 @@ class BinarySearchTree {
     }
   }
 
+  contains(val) {
+    debugger;
+    if (this.val === val) {
+      return true;
+    } else if (val < this.val && this.left instanceof BinarySearchTree) {
+      return this.left.contains(val);
+    } else if (val > this.val && this.right instanceof BinarySearchTree) {
+      return this.right.contains(val);
+    } else {
+      return false;
+    }
+  }
+
 } 
 
 
 let myTree = new BinarySearchTree(50);
 
+// Test cases
 myTree.insert(10);
 myTree.insert(15);
 myTree.insert(20);
@@ -42,3 +56,6 @@ myTree.insert(22);
 myTree.insert(33);
 myTree.insert(56);
 myTree.insert(4);
+myTree.contains(100);
+myTree.contains(1);
+myTree.contains(100000000);
