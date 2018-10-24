@@ -1,10 +1,10 @@
 // Create a function that shifts each letter up the n amount upwards in the alphabet. We will not account for special characters instead of spaces
-
+// I don't like this, this feels over engineered
 function letterShifter (str, num) {
   let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'],
     lowerCaseStr = str.toLowerCase(),
     answer = '',
-    newNum = num % 26;
+    alphaRemainder = num % 26;
   
   for (let i = 0; i < lowerCaseStr.length; i++) {
     let currChar = lowerCaseStr[i];
@@ -15,7 +15,7 @@ function letterShifter (str, num) {
     }
 
     let alphaIndex = alphabet.indexOf(currChar),
-      updatedAlphaIndex = alphaIndex + newNum;
+      updatedAlphaIndex = alphaIndex + alphaRemainder;
     
     if (updatedAlphaIndex > 25) {
       updatedAlphaIndex -= 26;
