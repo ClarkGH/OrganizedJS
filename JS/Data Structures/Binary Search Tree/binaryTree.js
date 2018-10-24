@@ -56,6 +56,6 @@ myTree.insert(22);
 myTree.insert(33);
 myTree.insert(56);
 myTree.insert(4);
-myTree.contains(100);
-myTree.contains(1);
-myTree.contains(100000000);
+myTree.contains(100); //returns true
+myTree.contains(1); //returns true
+myTree.contains(100000000); //returns false
