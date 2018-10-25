@@ -26,7 +26,6 @@ class BinarySearchTree {
   }
 
   contains(val) {
-    debugger;
     if (this.val === val) {
       return true;
     } else if (val < this.val && this.left instanceof BinarySearchTree) {
@@ -36,6 +35,17 @@ class BinarySearchTree {
     } else {
       return false;
     }
+  }
+
+  depthFirstTraversal(callback) {
+    if (this.left !== null) {
+      this.left.depthFirstTraversal(callback);
+    }
+    callback(this.val);
+    if (this.right !== null) {
+      this.right.depthFirstTraversal(callback);
+    }
+
   }
 
 } 
@@ -56,6 +66,13 @@ myTree.insert(22);
 myTree.insert(33);
 myTree.insert(56);
 myTree.insert(4);
+
 myTree.contains(100); //returns true
 myTree.contains(1); //returns true
 myTree.contains(100000000); //returns false
+
+function logValues(val) {
+  console.log(val)
+}
+
+myTree.depthFirstTraversal(log);
