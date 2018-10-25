@@ -37,11 +37,23 @@ class BinarySearchTree {
     }
   }
 
-  depthFirstTraversal(callback) {
+  depthFirstTraversal(callback, order) {
+    if (order !== 'pre-order' || order !== 'in-order') {
+      return;
+    }
+
+    if (order === 'pre-order') {
+      callback(this.val);
+    }
+
     if (this.left !== null) {
       this.left.depthFirstTraversal(callback);
     }
-    callback(this.val);
+
+    if (order === 'in-order') {
+      callback(this.val);
+    }
+    
     if (this.right !== null) {
       this.right.depthFirstTraversal(callback);
     }
@@ -74,5 +86,5 @@ myTree.contains(100000000); //returns false
 function logValues(val) {
   console.log(val)
 }
-
-myTree.depthFirstTraversal(log);
+myTree.depthFirstTraversal(log, 'pre-order');
+myTree.depthFirstTraversal(log, 'in-order');
