@@ -30,14 +30,14 @@ function mode(nums) {
 
   // find most common value
   for (let key in map) {
-    if (map[key] > max) {
-      max = map[key;]
+    // need to use hasOwnProperty to make sure key isn't coming from prototype
+    if ( map.hasOwnProperty(key) && map[key] > max) {
+      max = map[key];
       answer = key;
     }
   }
 
   // return most common value
-  return answer[1];
-
+  return answer;
   // stretch, only return most common value if it's the most recurring (none equally recurring), otherwise return null
 }
