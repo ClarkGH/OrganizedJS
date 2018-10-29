@@ -32,3 +32,4 @@ Currently I'm only covering Javascript, but do plan on adding more later.
 3. Finish Intermediate section
 4. Finish Advanced section
 5. Create problems (Homework) for each lesson
+6. Explain what continue does and where to use it
