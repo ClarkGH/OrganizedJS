@@ -16,7 +16,8 @@ function median(nums) {
 
 function mode(nums) {
   let map = {},
-    answer = [1,0];
+    max = 0,
+    answer = 0;
 
   // hash map with count
   for (let num of nums) {
@@ -29,7 +30,10 @@ function mode(nums) {
 
   // find most common value
   for (let key in map) {
-    if (map[key] > answer[0]) answer[1] = key;
+    if (map[key] > max) {
+      max = map[key;]
+      answer = key;
+    }
   }
 
   // return most common value
