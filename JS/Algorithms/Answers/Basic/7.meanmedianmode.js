@@ -11,9 +11,29 @@ function mean(nums) {
 }
 
 function median(nums) {
-
+  return nums[Math.floor(nums.length/2)];
 }
 
 function mode(nums) {
+  let map = {},
+    answer = [1,0];
 
+  // hash map with count
+  for (let num of nums) {
+    if (map[num] === undefined) {
+      map[num] = 1;
+    } else {
+      map[num]++;
+    }
+  }
+
+  // find most common value
+  for (let key in map) {
+    if (map[key] > answer[0]) answer[1] = key;
+  }
+
+  // return most common value
+  return answer[1];
+
+  // stretch, only return most common value if it's the most recurring (none equally recurring), otherwise return null
 }
