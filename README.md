@@ -4,7 +4,7 @@
 
 I firmly hold the belief that you need to write code to get good with writing code. These are my notes compiled in an organized format. 
 
-Currently I'm only covering Javascript, but do plan on adding more later.
+Currently I'm only covering JavaScript, but do plan on adding more later.
 
 ## To get the most out of my code
 

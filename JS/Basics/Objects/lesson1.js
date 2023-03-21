@@ -1,7 +1,7 @@
 // Object basics
 
 /*
-  Everything in Javascript that is not a primitive value is an object
+  Everything in JavaScript that is not a primitive value is an object
 */
 
 { key: "value" } //basic objects are key value pairs

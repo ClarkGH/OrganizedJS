@@ -3,11 +3,11 @@
  * Bunch of notes I wrote to help organize all of the mixed-up JS knowledge everywhere.
  * 
  * How can I use this?
- * Review the primitives section first if you don't know much about javascript.
+ * Review the primitives section first if you don't know much about JavaScript.
 */
 
-/* What Forms Javascript?
- * Javascript has 8 different data types
+/* What Forms JavaScript?
+ * JavaScript has 8 different data types
  * 1. Numbers
  * 2. Strings
  * 3. Booleans

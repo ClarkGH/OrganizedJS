@@ -1,7 +1,7 @@
 // ES 2015 and Beyond: Binary and Octal literals
 
 /*
-  Javascript now has two useful built-in methods to translate binary into JS number values
+  JavaScript now has two useful built-in methods to translate binary into JS number values
   I recommend reading up on binary/octal values to understand this section
 */
 

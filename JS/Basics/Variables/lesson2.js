@@ -1,7 +1,7 @@
 //Hoisting
 'use strict'; //we're using strict mode to prevent accidental global variables, more on that later
 
-/* In javascript there is something called hoisting
+/* In JavaScript there is something called hoisting
   Function and variable declarations are processed before the code actually runs (this is called hoisting)
   Variable definitions are NEVER hoisted
 */

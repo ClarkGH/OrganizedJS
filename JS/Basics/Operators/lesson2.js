@@ -1,7 +1,7 @@
 // JavaScript operators: Unary, Binary, Ternary
 
 /*
-  Javascript has "binary" and "unary" operators. 
+  JavaScript has "binary" and "unary" operators. 
   There is a single "ternary" operator (the conditional operator)
   Binary requires 2 operands, one before operator and another after
 */

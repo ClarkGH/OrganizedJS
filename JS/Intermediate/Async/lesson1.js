@@ -14,7 +14,7 @@ console.log('I will run third');
 
 // note the function in the argument, that is a callback
 // if you run this in your dev console, wait 3 seconds and watch for the result
-// this is Asyncronous Javascript
+// this is Asyncronous JavaScript
 
 // Why do you think a timeout that waits 0 milliseconds is logged last?
 // If this is confusing, no worries

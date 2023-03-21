@@ -1,7 +1,7 @@
 // Node.js: an introduction
 
 /* 
-  - Node is a platform built on Chrome's V8 Javascript runtime
+  - Node is a platform built on Chrome's V8 JavaScript runtime
   - It's used to build network applications that are both scalable and fast
   - Build via a non-blocking and event-driven I/O model
   - Lightweight and efficient, great with real-time applications that are potentially data intensive

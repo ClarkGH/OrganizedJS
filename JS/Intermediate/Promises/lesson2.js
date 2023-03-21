@@ -1,7 +1,7 @@
 // Using Promises
 
 /*
-  In Javascript, a promise is an object that will return an eventual failure or completion of an async operations
+  In JavaScript, a promise is an object that will return an eventual failure or completion of an async operations
   The old callback logic:
 */
 

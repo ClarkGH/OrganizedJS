@@ -1,7 +1,7 @@
 // ES6 and classes
 
 /*
-ES2015 introduced classes which are a new way to create objects in Javascript
+ES2015 introduced classes which are a new way to create objects in JavaScript
 */
 
 // Example 1: class

@@ -1,4 +1,4 @@
-// What a linked list would look like in javascript
+// What a linked list would look like in JavaScript
 
 
 // The LinkedList Object

@@ -1,7 +1,7 @@
 // How to scope (variables)
 
 // In JS, scope is the set of objects and their properties/methods that you have access to
-// Javascript uses something called Function Scope: the scope changes inside functions
+// JavaScript uses something called Function Scope: the scope changes inside functions
 
 
 // Example 1:

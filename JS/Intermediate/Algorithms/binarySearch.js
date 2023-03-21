@@ -1,4 +1,4 @@
-// Binary Search Algorithm: Javascript
+// Binary Search Algorithm: JavaScript
 
 /* 
   Binary search algorithms find values in sorted arrays in O(log n) time

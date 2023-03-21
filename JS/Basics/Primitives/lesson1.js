@@ -1,9 +1,9 @@
 // Primitives
 
 /*
- * Primitives are basic values in Javascript.
+ * Primitives are basic values in JavaScript.
  * They are NOT objects
- * Javascript currently has 7 primitives.
+ * JavaScript currently has 7 primitives.
  * 1. numbers
  * 2. strings
  * 3. booleans
@@ -14,7 +14,7 @@
 */
 
 1; // number
-"hi"; //string
+"use strict"; //string
 true; // false
 Symbol('foo'); //symbol
 undefined; //undefined
