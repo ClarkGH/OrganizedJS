@@ -23,7 +23,7 @@
 //Examples
 
 1; // number
-"hi"; // string
+"use strict"; // string
 true; // false
 Symbol('foo'); // symbol
 undefined; // undefined
@@ -32,3 +32,25 @@ null; // null
 function emptyFunction () {} // object
 [1, 2, 3] // object
 const gary = new Map(); // object
+
+/**
+ * Javascript works with both value and reference.
+ * Every primitive is a value.
+ * Every object has properties by reference.
+ */
+
+const value = 1; // Value
+const dog = { say: 'woof' };
+let smartDog = dog;
+
+// We're overwriting the reference's value!
+smartDog.say = "Your taxes have been completed, buddy!";
+console.log(dog.say); // "Your taxes have been completed, buddy!"
+
+// We can overcome this by making a shallow copy.
+dog.say = "bark?";
+smartDog = { ...dog, doesTaxes: true };
+smartDog.say = 'I have no idea what I am doing!';
+
+console.log(dog.say); // Bark
+console.log(smartDog.say); // I have no idea what I am doing!

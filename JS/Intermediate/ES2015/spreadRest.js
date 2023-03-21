@@ -4,9 +4,18 @@
  * The Rest Params Operator '...' ...
  * It's used specifically with function params.
  * It Infers all arguments up to that argument's index into an array.
- **/ 
+ * This is an alternative to the arguments object that exists within every JavaScript function.
+ **/
 
-// Practical use-case
+// Before we had Rest Parameters
+function sum() {
+  // Calling arguments is a performance hit!
+  var nums = Array.prototype.slice.call(arguments, 1);
+
+  return nums.reduce((a,b) => a + b);
+}
+
+// Now we have rest params built-in
 const sum = (...nums) => {
   return nums.reduce((a,b) => a + b);
 };
