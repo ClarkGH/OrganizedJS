@@ -1,0 +1,7 @@
+{
+  "name": "organizedjs",
+  "private": true,
+  "scripts": {
+    "check": "node scripts/check-syntax.mjs"
+  }
+}
