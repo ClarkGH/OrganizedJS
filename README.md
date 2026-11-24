@@ -23,6 +23,7 @@ Currently I'm only covering JavaScript, but do plan on adding more later.
 
 - Feel free to raise issues or nitpick
 - If something is confusing, don't hesitate to point it out 
+- Before opening a PR, run `pnpm check` to make sure every lesson file still parses (no install needed)
 - Keep in mind that this is in the draft writing stage and there's currently a year or two of work left for content completion.
 
 ## TODO:
