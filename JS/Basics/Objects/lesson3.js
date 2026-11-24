@@ -13,6 +13,8 @@ function Smoothie( fruit1, fruit2 ) { //note that I've capitalized the construct
   this.showSmoothie = function() {
     console.log( "Here is a delicious " + this.mainFruit + " smoothie. Mixed with the delicious flavor of " + this.secondaryFruit + "." );
   }
+  // Note: every Smoothie gets its own copy of showSmoothie
+  // Putting it on Smoothie.prototype instead shares one copy, more on that in the inheritance section
 }
 
 var bananaPeachBliss = new Smoothie( "banana", "peach" ),

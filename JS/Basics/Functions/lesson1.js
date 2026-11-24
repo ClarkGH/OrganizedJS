@@ -10,7 +10,7 @@
 
 // Example 1: Basic Function
 function add1 ( num ) { //function *name* ( *param* ) { code }
-  return num++; // here we're incrementing the num param by 1
+  return num + 1; // here we're adding 1 to the num param. Careful: return num++ would hand back the old value, then add 1
 }
 // function invocation is: *name*(*paramVal*);
 add1( 1 ); // returns 2

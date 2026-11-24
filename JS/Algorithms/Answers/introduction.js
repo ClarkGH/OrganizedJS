@@ -10,7 +10,7 @@
 
 // 1. Reverse a String 
 
-// easy solution O(nlog(n))
+// easy solution O(n)
 
 // function reverseStr(str) {
 //   const splitStr = str.split(''),
@@ -23,8 +23,8 @@
 
 // function reverseStr(str) {
 //   let answer = ''
-//   for (let i = str.length - 1; i >= str.length; i--) {
-//     answer = str[i] + answer;
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     answer += str[i];
 //   }
 //   return answer;
 // }
@@ -32,8 +32,9 @@
 // for-of loop solution o(n)
 
 // function reverseStr(str) {
+//   let answer = '';
 //   for (let char of str) {
-//     answer = str[i] + answer;
+//     answer = char + answer;
 //   }
 //   return answer;
 // }
@@ -42,7 +43,9 @@
 
 // function reverseStr(str) {
 //   let answer = '';
-//   str.split('').forEach((char) => answer + char);
+//   str.split('').forEach((char) => {
+//     answer = char + answer;
+//   });
 //   return answer;
 // }
 
@@ -51,7 +54,7 @@
 // function reverseStr(str) {
   // return str.split('').reduce( (accumulator, char) => {
   //   return char + accumulator;
-  // });
+  // }, ''); // the '' start value keeps an empty string from throwing
 // }
 
 // O(n) bad example, overly complex and has a bug, can you fix it?
@@ -76,22 +79,21 @@
 
 // reduce solution o(n) w/ reverse
 // function isPalindrome(str) {
-//   let reversedStr = '';
-//   str.split('').reduce((accumulator, char) => {
-//     reversedStr = char + accumulator;
-//   });
+//   const reversedStr = str.split('').reduce((accumulator, char) => {
+//     return char + accumulator;
+//   }, '');
 //   return reversedStr === str;
 // }
 
-// O(log(n)) solution, compare head to tail
+// O(n) solution, compare head to tail (it only walks half the string, but half of n is still O(n))
 
-// function reverseStr(str) {
-//   let str = str.toLowerCase();
+// function isPalindrome(str) {
+//   const lowerStr = str.toLowerCase();
 //   let start = 0;
-//   let end = str.length - 1;
+//   let end = lowerStr.length - 1;
 // 
 //   while (start < end) {
-//     if (str[start] !== str[end]) {
+//     if (lowerStr[start] !== lowerStr[end]) {
 //       return false;
 //     }
 //     start++;
@@ -122,7 +124,8 @@
 //       answer = char;
 //     }
 //   }
- 
+
+//   return answer;
 // }
 
 
@@ -148,25 +151,39 @@ var twoSum = function (nums, target) {
 // that sum up to the specified value
 
 function findTriplets(array, value) {
-  var array = array.sort(),
-    length = array.length;
+  // copy before sorting so we don't change the caller's array, and sort as numbers (plain .sort() sorts as strings)
+  var sorted = [...array].sort((a, b) => a - b),
+    length = sorted.length,
+    triplets = [];
 
-  for (var i = 0; i < length; i++) {
+  for (var i = 0; i < length - 2; i++) {
+    if (i > 0 && sorted[i] === sorted[i - 1]) {
+      continue; // same starting number as last time, skip it so triplets stay unique
+    }
     var j = i + 1,
       k = length - 1;
     while (j < k) {
-      if (arr[i] + arr[j] + arr[k] < value) {
+      var sum = sorted[i] + sorted[j] + sorted[k];
+      if (sum < value) {
         j++;
-      } else if (arr[i] + arr[j] + arr[k] > value) {
+      } else if (sum > value) {
         k--;
       } else {
-        console.log(arr[i] + "," + arr[j] + "," + arr[k]);
+        console.log(sorted[i] + "," + sorted[j] + "," + sorted[k]);
+        triplets.push([sorted[i], sorted[j], sorted[k]]);
         j++;
         k--;
+        // skip repeats on both sides for the same reason
+        while (j < k && sorted[j] === sorted[j - 1]) {
+          j++;
+        }
+        while (j < k && sorted[k] === sorted[k + 1]) {
+          k--;
+        }
       }
     }
   }
-  return true;
+  return triplets;
 }
 
 // You're given an array of numbers
@@ -232,19 +249,19 @@ const exampleArray = [18, 97, 2, 9, 3, 0, 26, 0, 26, 15, 5, 18, 43];
 
 //       highestProductOf2 = Math.max(
 //           highestProductOf2,
-//           currentPos * highest,
-//           currentPos * lowest
+//           currentPos * highestValue,
+//           currentPos * lowestValue
 //       );
 
 //       lowestProductOf2 = Math.min(
 //           lowestProductOf2,
-//           currentPos * highest,
-//           currentPos * lowest
+//           currentPos * highestValue,
+//           currentPos * lowestValue
 //       );
 
-//       highest = Math.max(highest, currentPos);
+//       highestValue = Math.max(highestValue, currentPos);
 
-//       lowest = Math.min(lowest, currentPos);
+//       lowestValue = Math.min(lowestValue, currentPos);
 //   }
 
 //   return highestProductOf3;
@@ -271,7 +288,8 @@ function myFunction(arr1, arr2) {
     arr1Head = arr1[pos1];
     arr2Head = arr2[pos2];
 
-    if (arr1Head && arr1Head < arr2Head) {
+    // take from arr1 while it still has values and its head is smaller, or once arr2 is used up
+    if (pos2 >= arr2.length || (pos1 < arr1.length && arr1Head <= arr2Head)) {
       mergedArr[i] = arr1Head;
       pos1++;
       i++;
@@ -299,7 +317,7 @@ class SinglyLinkedList {
   add(value) {
     let currentNode = this;
     while (currentNode.next !== null) {
-      currentNode = this.next;
+      currentNode = currentNode.next;
     }
 
     currentNode.next = new SinglyLinkedList(value);
@@ -319,10 +337,24 @@ class SinglyLinkedList {
     return this.next.find(value);
   }
 
+  // returns true if a node was removed, false if the value wasn't found
   delete(value) {
+    // the head is this object, so we can't unlink it, we copy the next node into it instead
+    if (this.value === value) {
+      if (this.next === null) {
+        return false; // can't delete the only node, the list would have nothing left to be
+      }
+      this.value = this.next.value;
+      this.next = this.next.next;
+      return true;
+    }
+
     const predecessor = this._findPredecessor(value);
-    const current = predecessor.next;
-    predecessor.next = current.next;
+    if (predecessor === null) {
+      return false;
+    }
+    predecessor.next = predecessor.next.next;
+    return true;
   }
 
   // Recursive
@@ -390,12 +422,17 @@ function findPrimeFactors(num) {
   var divisor = 2,
     factors = [];
 
-  while (num > 2) {
+  if (!Number.isInteger(num) || num < 2) { // decimals would loop forever, and below 2 has no prime factors
+    return factors;
+  }
+
+  while (num > 1) {
     if (num % divisor === 0) {
       factors.push(divisor);
-      num = num / divisor;
+      num = num / divisor; // don't move on yet, the same divisor might fit again (12 = 2 * 2 * 3)
+    } else {
+      divisor++;
     }
-    divisor++;
   }
   return factors;
 }
@@ -452,7 +489,7 @@ function findNthValueInSequence(n) {
 
   var fibNums = [0, 1];
 
-  for (var i = 2; i < n; i++) {
+  for (var i = 2; i <= n; i++) {
     fibNums[i] = (fibNums[i - 1] + fibNums[i - 2]);
   }
   return fibNums[n];

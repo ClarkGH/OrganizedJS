@@ -67,6 +67,7 @@ finally {
 // What is logged? Why?
 // What would happen if we were to change the boolean values
 // Removed the self-invoked function and the return (line 58). What would you expect to see?
-// Why do you think it's a good idea to return out of the function at that point?
+// Returning inside finally throws away the error the inner catch re-threw, so the outer catch never runs
+// That silent swallow is why linters warn about it (ESLint: no-unsafe-finally)
 
-// Hint: Duplicate logs are never good
+// Hint: an error that quietly disappears is harder to debug than a duplicate log

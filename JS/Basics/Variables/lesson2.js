@@ -3,7 +3,7 @@
 
 /* In JavaScript there is something called hoisting
   Function and variable declarations are processed before the code actually runs (this is called hoisting)
-  Variable definitions are NEVER hoisted
+  Variable definitions are NEVER hoisted (function declarations are, with their whole body, so you can call them before they're written)
 */
 
 // Example 1: Undeclared variable
@@ -41,3 +41,10 @@ If we were the engine, first we would look for declarations and then process the
   3. "I see on the first line our declared batman variable is defined to 'I'm still batman!'. I'll store that value there "
   4. "Okay, now I'm on the second line and I see that I'm logging the value our batman variable holds."
 */
+
+// Example 5: let and const (ES2015)
+console.log(robin); // ReferenceError: Cannot access 'robin' before initialization
+let robin = 'I\'m robin!';
+
+// let and const are hoisted too, but they can't be used until their line runs
+// that gap is called the temporal dead zone, and it turns the silent undefined from var into a clear error

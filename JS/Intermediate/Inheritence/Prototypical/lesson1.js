@@ -12,7 +12,7 @@ is simple
 var mammal = {
   type: 'mammal type',
   name: 'Some name',
-  getAnimal: () => {
+  getAnimal: function() { // a regular function, arrow functions don't get their own 'this'
     return this.name + ' is a ' + this.type;
   }
 }
@@ -23,7 +23,7 @@ var cat = {
 }
 
 
-cat.__proto__ = mammal //NEVER DO THIS! Demo purposes only
+cat.__proto__ = mammal //NEVER DO THIS! Demo purposes only (Object.create(mammal) is the safe way, see Basics/Objects/lesson6.js)
 
 
 // Important side note: don't ever use Object.__proto__ = anotherObject;

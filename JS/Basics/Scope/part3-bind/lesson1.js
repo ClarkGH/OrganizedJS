@@ -19,5 +19,5 @@ var logSaying = function() {
 logSaying();
 
 // Note: why are we getting "this.getSaying is not a function"
-// 'this', in the case of the logSaying function, is using the global scope
+// 'this', in the case of the logSaying function, is the global object, because logSaying was called on its own instead of as a method of animal
 // Try to get this working

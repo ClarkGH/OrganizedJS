@@ -20,8 +20,8 @@ console.log(nameContainer[1]) //logs the [string], Barbie
 // Review loops if this confuses you
 var nameContainer = ['Bill', 'Barbie', 'Bobby'];
 
-for ( var index = 0; index < nameContainer.length; i++ ) {
-  console.log( nameContainer[i] ); // What do you expect to see?
+for ( var index = 0; index < nameContainer.length; index++ ) {
+  console.log( nameContainer[index] ); // What do you expect to see?
 }
 
 // Try creating your own array and play with it

@@ -24,7 +24,7 @@
 
 1; // number
 "use strict"; // string
-true; // false
+true; // boolean
 Symbol('foo'); // symbol
 undefined; // undefined
 null; // null
@@ -52,5 +52,5 @@ dog.say = "bark?";
 smartDog = { ...dog, doesTaxes: true };
 smartDog.say = 'I have no idea what I am doing!';
 
-console.log(dog.say); // Bark
+console.log(dog.say); // bark?
 console.log(smartDog.say); // I have no idea what I am doing!

@@ -1,14 +1,15 @@
 // Variables: Declaring muliple variables
 
-// As a reference, it's best to use commas and declare variables at the top of scope
+// Two common styles: one var with commas, or one declaration per line
+// One per line (ESLint's one-var rule) makes adding or removing a variable a one-line change
+// Pick one and be consistent. With let and const, declare variables close to where you use them
 
-// Example 1: Good/Clean way to declare variables
+// Example 1: Comma style
 var water = 'essential',
   oxygen = water,
   waffles = 'nom nom nom';
 
-// Too many vars clutter things up
-// Example 2: Not so good, more typing, way
+// Example 2: One declaration per line
 var water = 'essential';
 var oxygen = water;
 var waffles = 'nom nom nom';

@@ -15,7 +15,7 @@
 
 1; // number
 "use strict"; //string
-true; // false
+true; // boolean
 Symbol('foo'); //symbol
 undefined; //undefined
 null; //null

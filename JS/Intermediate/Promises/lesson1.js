@@ -15,7 +15,7 @@ var asyncTask = ( number, callback ) => {
   return callback( number );
 }
 
-setTimeout( asyncTask( 2, asyncSquared), 500); 
+setTimeout( () => console.log( asyncTask( 2, asyncSquared ) ), 500); // setTimeout needs a function, so we wrap the call in one 
 
 /*
   Imagine linking in more logic with multiple nests callback loops.
@@ -24,4 +24,4 @@ setTimeout( asyncTask( 2, asyncSquared), 500);
 */
 
 // With es6, we can chain promises instead, but first we should know how to make our own
-// It is currently recommended that you work with a promise library like bluebird as native promises "leak" memory
+// Native promises are built into every modern browser and Node, no library needed

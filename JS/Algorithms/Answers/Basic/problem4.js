@@ -2,5 +2,6 @@
 
 // simple solution
 function reverseNum(number) {
-  return parseInt(number.toString().split('').reverse().join(''));
+  // reverse the digits without the minus sign, then put the sign back
+  return Math.sign(number) * parseInt(Math.abs(number).toString().split('').reverse().join(''));
 }

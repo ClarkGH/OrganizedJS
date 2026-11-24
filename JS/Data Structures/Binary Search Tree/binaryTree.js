@@ -38,7 +38,7 @@ class BinarySearchTree {
   }
 
   depthFirstTraversal(callback, order) {
-    if (order !== 'pre-order' || order !== 'in-order') {
+    if (order !== 'pre-order' && order !== 'in-order') {
       return;
     }
 
@@ -47,7 +47,7 @@ class BinarySearchTree {
     }
 
     if (this.left !== null) {
-      this.left.depthFirstTraversal(callback);
+      this.left.depthFirstTraversal(callback, order);
     }
 
     if (order === 'in-order') {
@@ -55,7 +55,7 @@ class BinarySearchTree {
     }
     
     if (this.right !== null) {
-      this.right.depthFirstTraversal(callback);
+      this.right.depthFirstTraversal(callback, order);
     }
 
   }
@@ -86,5 +86,5 @@ myTree.contains(100000000); //returns false
 function logValues(val) {
   console.log(val)
 }
-myTree.depthFirstTraversal(log, 'pre-order');
-myTree.depthFirstTraversal(log, 'in-order');
+myTree.depthFirstTraversal(logValues, 'pre-order');
+myTree.depthFirstTraversal(logValues, 'in-order');

@@ -25,7 +25,7 @@ someAsyncFunction()
 // Nice things about promises vs callbacks
 
 /* 
-  Callbacks will never be called before the event loop finishes running (no race conditions)
-  Callbacks with .then() will run regardless of success or failure
+  Callbacks will never be called before the code that's currently running finishes (they wait in the microtask queue)
+  .then(onSuccess, onFailure) runs onSuccess if the promise resolves and onFailure if it rejects. Use .finally() for code that runs either way
   You can chain many .then() or other promise object methods.
 */

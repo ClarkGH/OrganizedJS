@@ -9,12 +9,12 @@
 var person = {
   index: 0, //most here's a key referencing the value 0
   "name": "Barry", // putting keys within quotes will reference it correctly
-  19: "19" //you can use numbers as keys
+  19: "19" //you can use numbers as keys, they get converted to the string "19"
 }
 
 console.log( person );
 console.log( person.index );
-console.log( person[index] );
+console.log( person['index'] ); // bracket notation takes a string (or a variable holding one)
 
 // Example 2: Object constructors
 var animal = new Object();

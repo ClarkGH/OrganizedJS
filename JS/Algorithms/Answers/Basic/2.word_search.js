@@ -9,16 +9,15 @@ function wordHunt (str1 = '', str2 = '') {
     str1Arr = str1.split(' '),
     str2Arr = str2.split(' ');
 
+  // use get/set with a Map, map[word] would read Map's own properties (try the word 'constructor')
   for (let i = 0; i < str2Arr.length; i++) {
-    if (map[str2Arr[i]] === undefined) {
-      map[str2Arr[i]] = 0;
-    }
-    map[str2Arr[i]]++;
+    map.set(str2Arr[i], (map.get(str2Arr[i]) || 0) + 1);
   }
 
   for (let j = 0; j < str1Arr.length; j++) {
-    if (map[str1Arr[j]] !== undefined && map[str1Arr[j]] > 0) {
-      map[str1Arr[j]]--;
+    let count = map.get(str1Arr[j]);
+    if (count > 0) {
+      map.set(str1Arr[j], count - 1);
     } else {
       return false;
     }

@@ -18,8 +18,8 @@ var logSaying = function( greeting ) {
 
 // instead of binding, we can us .call or .apply if we only want to call the function once
 
-logSaying.call(animal, 'Yo'); //.call() takes scope, then remaining parameters .call(object, arg1, arg2, etc)
+logSaying.call(animal, 'Yo'); //.call() takes the 'this' value, then remaining parameters .call(object, arg1, arg2, etc)
 
-logSaying.apply(animal, ['Howdy']); //.apply() takes scope, then an array of parameters .apply(object, [arg1, arg2, etc])
+logSaying.apply(animal, ['Howdy']); //.apply() takes the 'this' value, then an array of parameters .apply(object, [arg1, arg2, etc])
 
 // What is the difference between bind(), call(), and apply()?

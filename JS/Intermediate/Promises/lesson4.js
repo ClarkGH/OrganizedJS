@@ -9,7 +9,7 @@ var ourPromise = new Promise( ( resolve, reject ) => {
 
 ourPromise.then ( ( value ) => {
   console.log( value );
-  Promise.reject( 'Ruh Roh Raggy' ); //we're going to force an error here, we could also use throw instead of Promise.reject
+  return Promise.reject( 'Ruh Roh Raggy' ); //we're going to force an error here. It has to be returned (or use throw) or the chain never sees it
 }).catch( ( error ) => {
   console.error( error );
 }).then( 
@@ -21,4 +21,4 @@ ourPromise.then ( ( value ) => {
   }
 );
 
-// Hint: Comment and uncomment out line to answer the question on line 18
+// Hint: Comment and uncomment out line to answer the question on line 20

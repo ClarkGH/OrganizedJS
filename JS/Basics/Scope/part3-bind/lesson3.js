@@ -1,7 +1,7 @@
 // WTF is bind doing?
 
-// Every function object has 3 internal methods, apply(), bind(), and call()
-// .bind() - takes an object as an argument, will attach the argument's scope to the function it runs on and will be bound to it
+// Every function inherits 3 methods from Function.prototype: apply(), bind(), and call()
+// .bind() - takes an object as an argument and returns a new function whose 'this' is always that object
 
 //Example 3
 //no need to run, conceptually the same as example2, only with explanations
@@ -22,7 +22,7 @@ var logSaying = function() {
 
 var sayTheThing = logSaying.bind(animal); //here I set a variable to the function with the animal object's context bound to it
 
-sayTheThing(); //here I run the function with the newly bound scope
+sayTheThing(); //here I run the function with the newly bound 'this'
 
-// the 'this', on line 18, is pointing to animal's scope and now has access to its properties, methods, and values
+// the 'this', on line 18, is pointing to the animal object and now has access to its properties, methods, and values
 // next lesson: .call() and .apply()

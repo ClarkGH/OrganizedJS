@@ -27,7 +27,7 @@ console.log( num1 === num2 );
 // Example 2: Literal examples
 var array = [],
   object = {},
-  string = ''.
+  string = '',
   number = 0,
   boolean = true,
   undefinedVar,

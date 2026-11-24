@@ -1,7 +1,7 @@
 //Object Constructors more in depth
 
 /*
-  All functions that have the 'new' keyword will initiate the prototype property (which is the objects prototype)
+  Every regular function has a prototype property. Calling it with the 'new' keyword makes an object whose prototype is that property
   More on prototypes will be explained in the inheritence section
 */
 
@@ -12,7 +12,7 @@ function returnThis() {
 
 returnThis(); //What does this return? Why?
 
-//Note: if you ran the above example, you'll see that it returned the global object
+//Note: if you ran the above example, you'll see that it returned the global object (in strict mode it would be undefined)
 
 // Example 2: Functiopn with new
 var returned = new returnThis(); //What does does this return/ Why?

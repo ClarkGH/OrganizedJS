@@ -7,7 +7,7 @@ Linked lists are data structures with pointers and nodes that organize data in a
 Nodes will point to another node, and will eventually point to null when they end.
 
 ## The Big O
-Linked Lists have an O(n) worst case when it comes to searching, but O(1) when it comes to adding or deleting nodes.
+Linked Lists have an O(n) worst case when it comes to searching, but O(1) when it comes to adding or deleting nodes, as long as you already have the node (or it's the head/tail). Finding a node in the middle first is still O(n).
 
 ### Use Cases
 1. You need to make a lot of insertions and deletions in the middle of a Datastructure and arrays/lists are too expensive in comparison

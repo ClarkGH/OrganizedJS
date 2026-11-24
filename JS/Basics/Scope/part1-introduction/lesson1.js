@@ -1,7 +1,8 @@
 // How to scope (variables)
 
-// In JS, scope is the set of objects and their properties/methods that you have access to
+// In JS, scope is the set of variables and functions that you have access to
 // JavaScript uses something called Function Scope: the scope changes inside functions
+// Since ES2015, let and const are also Block Scoped: they only exist inside the nearest pair of {}
 
 
 // Example 1:

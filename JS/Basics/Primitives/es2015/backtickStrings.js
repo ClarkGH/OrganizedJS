@@ -14,7 +14,7 @@ barnabus
 boon
 borthus
 `
-console.log(fewLines);
+console.log(threeLines);
 // Notice how it would be different from a single/double quote string?
 // Compare and contrast
 
@@ -24,23 +24,24 @@ const dude = "Daniel Boon",
 
 console.log(greeting);
 
-// Template Literals
+// Tagged Templates
 
 /*
- * A template literal is a string parsed as a literal HTML tag.
+ * A tagged template is a template literal with a function name in front of it.
  * These are very useful
- * You can release a string that acts as a literal HTML object.
+ * The function gets called with an array of the plain string parts, then each ${} value as its own argument.
+ * Whatever the function returns is the result, so you can use it to build things like HTML.
  */
 
-function p(textBlob) {
-  return `<p>${textBlob}</p>`;
+function p(strings) {
+  return `<p>${strings[0]}</p>`;
 }
 
 // Look at how we can call it!
-p`What an amazing paragraph this was!` // "<p>What an amazing paragraph this was!</p>""
+p`What an amazing paragraph this was!` // "<p>What an amazing paragraph this was!</p>"
 
 // Be careful with these calls though, they can be tricky:
-function foo(strings) {
+function weirdInterpolator(strings) {
   console.log(strings[1]);
 }
 

@@ -12,8 +12,12 @@
 // Unary operators require a single operand before or after the operator
 
 // Example 2: Unary operator
-1++;
-++1;
+var count = 1;
+count++; // operand before the operator
+++count; // operand after the operator
+typeof count; // 'number'
+!true; // false
+// Note: 1++ won't run, ++ needs somewhere to store the new value, like a variable
 
 // Ternary operators take 3 operands, in the case of JS there is only one ternary operator
 

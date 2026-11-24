@@ -3,14 +3,14 @@
 /**
  * The Rest Params Operator '...' ...
  * It's used specifically with function params.
- * It Infers all arguments up to that argument's index into an array.
+ * It gathers every argument from that parameter's position to the end into an array, so it has to be the last parameter.
  * This is an alternative to the arguments object that exists within every JavaScript function.
  **/
 
 // Before we had Rest Parameters
-function sum() {
-  // Calling arguments is a performance hit!
-  var nums = Array.prototype.slice.call(arguments, 1);
+function oldSum() {
+  // arguments looks like an array but isn't one, so we have to convert it first
+  var nums = Array.prototype.slice.call(arguments);
 
   return nums.reduce((a,b) => a + b);
 }
@@ -21,6 +21,7 @@ const sum = (...nums) => {
 };
 
 sum(1, 2, 3, 4); // 10
+oldSum(1, 2, 3, 4); // 10, same answer the long way
 
 const sayHappyBirthdayGreeting = (age, name, ...words) => {
   const birthdayMessage = words.join(' ');

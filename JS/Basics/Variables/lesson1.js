@@ -13,5 +13,5 @@
 // Example 1
 var variableName; //variable declaration. Variable will point to undefined
 console.log(variableName);
-variablName = 'string'; //variable definition. Variable will point to the address of the string 'string'
+variableName = 'string'; //variable definition. Variable will point to the address of the string 'string'
 console.log(variableName);

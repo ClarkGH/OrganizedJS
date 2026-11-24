@@ -1,21 +1,22 @@
 // Closures, who is their daddy and what does he do?
 
 // The abstrct daddy of closures is scope.
-variablor = 'Conditioner is better!' // property value on the global object, otherwise called a global variable.
-console.log(this.variablor);
+variablor = 'Conditioner is better!' // Because of hoisting, this assigns to the var declared below. Without that var, it would create a property on the global object, an accidental global variable.
+console.log(this.variablor); // In a browser script, top-level this is window, so this logs it. In Node, top-level this is module.exports, so it's undefined.
 
-var variablor = 'stop looking at me swan!'; // locally scoped variable, only accessible lexically to this global object and it's children. Goes away on garbage collection.
+var variablor = 'stop looking at me swan!'; // declared at the top level, so it's a global variable (in a browser it also becomes window.variablor). Everything in this file can see it.
 console.log(variablor);
 
 function scopeExample() {
   var variablart = 'Shampoo is better!'; // this is declared and defined within this function's lexical scope
 }
 
-variablart; // undefined
+// variablart; // ReferenceError: variablart is not defined. It only exists inside scopeExample, so it's commented out to let the rest of the file run.
 
 /**
- * A closure, is simply an enclosed scope that disallows access outside of its context.
- * This is useful with regards to security.
+ * A closure is a function bundled together with the variables from the scope it was created in.
+ * The inner function keeps access to those variables even after the outer function has returned.
+ * This is useful for keeping data private: code outside can't reach name directly, only through the returned function.
  **/ 
 
 function greet(name) {
@@ -25,6 +26,7 @@ function greet(name) {
 }
 
 var sayHiToKristina = greet('kristina'); // This function will always say hi to Deputy Kristina now, it is unchangeable.
+sayHiToKristina();
 
 // Here's MDN's example of using it to create more functionality:
 function makeAdder(x) {

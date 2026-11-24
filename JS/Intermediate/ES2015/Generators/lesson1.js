@@ -5,7 +5,7 @@
   - They:
     1. Maintain context and variable definitions
     2. Utilize yield or yield* expressions
-    3. Allow an alternative to generators by defining a function that maintains state/context
+    3. Are an alternative to writing a function (like a closure) that keeps track of its own state
     4. Work as factories for iterators
     5. Use function* syntax
 */
@@ -36,7 +36,7 @@ function* sayNum1() {
 }
 
 function* sayNum2() {
-  num = 5;
+  let num = 5;
   while( num > 0 ) {
     yield num--;
   }
