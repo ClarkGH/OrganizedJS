@@ -126,10 +126,13 @@ Answers go in `JS/Algorithms/Answers/`, the same as the existing ones.
 
 ### Setup (one-time)
 
-- [ ] `pnpm add -D typescript`. This is the repo's first dependency.
-- [ ] Add a `tsconfig.json` with `strict`, `noEmit`, and `erasableSyntaxOnly` [VERIFY the flag name and which TS version added it]. That flag makes `tsc` reject syntax that Node can't strip.
-- [ ] Add a `"typecheck": "tsc"` script. `pnpm check` skips `.ts` files on purpose: `node --check` doesn't strip types.
+- [x] `pnpm add -D typescript` (7.0.2). This is the repo's first dependency, so `node_modules/` is in `.gitignore`.
+- [x] `tsconfig.json`: `strict`, `noEmit`, `erasableSyntaxOnly` (rejects syntax Node can't strip), `verbatimModuleSyntax` (forces `import type`), `allowImportingTsExtensions` (imports use `./file.ts`, the same path Node needs). Each flag has a comment explaining it.
+- [x] `TS/package.json` sets `"type": "module"`, so TS lessons are ES modules. The JS lessons aren't affected.
+- [x] Added a `"typecheck": "tsc"` script. `pnpm check` skips `.ts` files on purpose: `node --check` doesn't strip types.
 - Run lessons with `node <file>.ts`. Node 26 strips the types and runs what's left.
+- `pnpm typecheck` fails with "No inputs were found" until the first `.ts` file exists in `TS/`. That's expected.
+- Lessons that use Node APIs (`fs`, `path`) will need `@types/node`, plus `"node"` added to `types` in tsconfig.
 
 ### TS/Basics
 

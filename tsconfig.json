@@ -1,0 +1,19 @@
+{
+  // Type checking only. Lessons run with `node <file>.ts`, which strips the types and runs what's left.
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "nodenext",
+    "strict": true,
+    // Never write .js files, tsc is only here to check types
+    "noEmit": true,
+    // Reject syntax Node can't strip (enum, namespace, parameter properties)
+    "erasableSyntaxOnly": true,
+    // Types must be imported with `import type`, otherwise Node crashes looking for a value that isn't there
+    "verbatimModuleSyntax": true,
+    // Lets imports say './shapes.ts', the same path Node needs at runtime
+    "allowImportingTsExtensions": true,
+    // No ambient @types packages. Add "node" here (and install @types/node) once a lesson uses fs, path, etc.
+    "types": []
+  },
+  "include": ["TS"]
+}

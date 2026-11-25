@@ -2,6 +2,10 @@
   "name": "organizedjs",
   "private": true,
   "scripts": {
-    "check": "node scripts/check-syntax.mjs"
+    "check": "node scripts/check-syntax.mjs",
+    "typecheck": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
   }
 }
