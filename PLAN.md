@@ -46,7 +46,7 @@ Rules:
 
 ## Phase 0: Finish what's already promised
 
-- [ ] `JS/Basics/Loops/lesson2.js`: for loops (the file is only a title right now)
+- [x] `JS/Basics/Loops/lesson2.js`: for loops (the file is only a title right now)
 - [ ] `JS/Basics/Loops/lesson3.js`: `while` and `do...while`
 - [ ] `JS/Basics/Loops/lesson4.js`: `for...of` vs `for...in`
 - [ ] `JS/Basics/Loops/lesson5.js`: `break` and `continue` (closes README TODO #6)
