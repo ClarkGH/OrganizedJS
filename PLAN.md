@@ -57,6 +57,27 @@ Rules:
 - [ ] `JS/Advanced/Functional Programming/map_filter_reduce/`: one lesson each for `map`, `filter`, and `reduce` (the reduce homework answer already exists)
 - [ ] `JS/Intermediate/Polyfills/lesson1.js`: fill in its TODO (why polyfills exist and how this one works)
 
+### Interview practice
+
+Solved problems go in `JS/Algorithms/Answers/Practice/`, one file per category. Each file holds a problem comment and my solution. Timed, no-autocomplete attempts go in `JS/Algorithms/Drills/` first. The categories are ordered by how often they come up.
+
+- [ ] Arrays and hashing ★: done: contains duplicate, valid anagram, two sum. Next: group anagrams, top k frequent, product of array except self, longest consecutive sequence
+- [ ] Two pointers ★: done: valid palindrome, two sum II, 3Sum. Next: container with most water, trapping rain water
+- [ ] Sliding window ★: done: best time to buy and sell stock, longest substring without repeating characters. Next: longest repeating character replacement, minimum window substring
+- [ ] Stack ★: valid parentheses, min stack, daily temperatures
+- [ ] Binary search: plain binary search, search in rotated sorted array, Koko eating bananas
+- [ ] Linked list: reverse, merge two sorted, detect a cycle, LRU cache
+- [ ] Trees ★: max depth, invert, validate BST, level order, lowest common ancestor
+- [ ] Heaps: kth largest, merge k sorted lists (write the heap by hand; JS doesn't have one)
+- [ ] Graphs ★: number of islands, clone graph, course schedule (topological sort)
+- [ ] Backtracking: subsets, permutations, combination sum
+- [ ] 1D dynamic programming: climbing stairs, house robber, coin change
+- [ ] Intervals: merge intervals, insert interval
+- [ ] Greedy: maximum subarray, jump game
+- [ ] Tries: implement a trie, word search II
+- [ ] 2D dynamic programming: unique paths, longest common subsequence
+- [ ] Advanced graphs, bit manipulation, math and geometry: only if a company's interview needs them
+
 ## Phase 1: Basics gaps
 
 - [ ] `JS/Basics/Conditionals/lesson1.js`: `if` / `else if` / `else`
@@ -120,7 +141,7 @@ Answers go in `JS/Algorithms/Answers/`, the same as the existing ones.
 - [ ] `JS/Data Structures/Binary Search Tree/`: post-order and level-order (breadth-first) traversal
 - [ ] Algorithms: merge sort, quicksort
 - [ ] Algorithms: dynamic programming (memoized fibonacci, then climbing stairs)
-- [ ] Algorithms: sliding window and two pointers ★
+- [ ] Algorithms: sliding window and two pointers ★ (lesson versions; the practice problems are in "Now: interview practice")
 
 ## Phase 6: TypeScript
 
